@@ -1,0 +1,10 @@
+保密：
+    (×××) jasypt 就是个骗子，骗骗不会编程的人还行，字面上加密了，程序员分分钟能解密出来，就是个玩具！
+    1.添加隐私信息加解密工具 jasypt
+    2.单元测试 encrypt方法好不好使
+    3.给隐私信息套上 DEC()插件
+    4.运行 mvn jasypt:encrypt -D jasypt.encryptor.password=密码 ，此时配置文件中的DEC(原文)部分变成了ENC(密文)
+    5.运行 mvn jasypt:decrypt -D jasypt.encryptor.password=密码 ，通过控制台查看打印出的原文
+        jasypt密码肯定不能写在源码里，别人看见了就能解密出来，运行时候把 jasypt.encryptor.password=密码 作为参数写在命令后面
+
+    既然不用Jasypt了，那就用时下最流行的 shiro 框架吧，能干好多活儿，不仅仅隐私配置加密。
